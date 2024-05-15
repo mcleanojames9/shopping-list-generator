@@ -1,0 +1,175 @@
+body {
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: 100%;
+
+    
+  }
+  #footer{
+    text-align: center;
+   
+  }
+  nav {
+      animation: expand 1s;
+      box-shadow: 2px 5px 9px lightslategray;
+      margin: 30px 30px;
+      text-align: center;
+      border-radius: 10px;
+      outline: none;
+      height: fit-content;
+      padding-top: 40px;
+      padding-bottom: 40px;
+  }
+  
+  nav button:hover {
+      background: linear-gradient(to right, lightblue, rgb(235, 239, 241), lightblue)
+  }
+  
+  nav button:focus {
+      width: 180px;
+      background: linear-gradient(to right, lightblue, rgb(235, 239, 241), lightblue)
+  }
+  
+  nav select:hover {
+    background: linear-gradient(to right, lightblue, rgb(235, 239, 241), lightblue)
+  }
+  
+  nav select:focus {
+    width: 180px;
+    background: linear-gradient(to right, lightblue, rgb(235, 239, 241), lightblue);
+    padding-left: 50px;
+  }
+  
+  nav button {
+      margin-left: 2.5%;
+      margin-right: 2.5%;
+      border: 2px solid lightblue;
+      border-radius: 10px;
+      height: 50px;
+      width: 160px;
+      
+      transition: 0.25s;
+      outline: none;
+  }
+  
+  nav option * {
+    height: 30px;
+  }
+  
+  nav select {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    border: 2px solid lightblue;
+    border-radius: 10px;
+    height: 50px;
+    width: 160px;
+    background: none;
+    transition: 0.25s;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding-left: 40px;
+  }
+  
+  @keyframes expand {
+      0% {
+        transform: scale(0.1);
+        opacity: 0;
+      }
+      
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  
+    h1 {
+      animation: expand 1.5s;
+      font-weight: 600;
+      font-family:candara;
+      font-size:45px;
+    }
+  h2{
+    font-size:65px;
+    font-family:candara;
+    font-weight:600;
+    
+
+  }
+
+  h4{
+    font-size:35px;
+    font-family:candara;
+  }
+  
+  #register {
+      animation: expand 1.5s;
+  }
+.my-container{
+  background-color:#45c3cc;
+}
+
+  .container { 
+    
+      animation: expand 1s;
+      box-shadow: 5px 10px 18px lightslategray;
+      padding: 30px;
+      width: 40%;
+      height: fit-content;
+      font-family: sans-serif;
+      font-weight:500;
+      color: rgb(4, 109, 112); 
+      border-radius: 35px;
+      text-align: center;
+      margin: auto;
+      background-color: rgb(231, 239, 240);
+      /* opacity: 0.9; */
+  
+  }
+  
+  .inputText {
+      animation: expand 1.5s;
+      box-shadow: 2px 5px 9px lightslategray;
+      margin: 30px auto;
+      display: block;
+      text-align: center;
+      border-color: lightblue;
+      border-radius: 10px;
+      width: 60%;
+      height: 30px;
+      transition: 0.25s;
+      outline: none;
+      opacity: 1;
+  }
+  
+  .inputText:focus {
+      width: 70%;
+      height: 37px;
+      border-color: darkblue;
+  }
+  
+  .button {
+      animation: expand 1.5s;
+      border: 0;
+      
+      display: block;
+      margin: 20px auto;
+      text-align: center;
+      border: 2px solid lightblue;
+      width: 40%;
+      height: 50px;
+      outline: none;
+      color: rgb(4, 109, 112);
+      border-radius: 10px;
+      transition: 0.25s;
+      cursor: pointer  
+  }
+  
+  .button:hover {
+     
+      width: 45%;
+      background: linear-gradient(to right, lightblue, rgb(235, 239, 241), lightblue)
+  }
+  
+  

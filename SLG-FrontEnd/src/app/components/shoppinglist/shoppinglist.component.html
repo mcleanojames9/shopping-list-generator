@@ -1,0 +1,62 @@
+<div class="myShoppingList div">
+  <div class=container-fluid
+    style=" text-align:left;border-radius:15px; color:white; border: 2px solid; background-color:  #45c3cc">
+  <h1 style="font-size:48px;font-style:bold; padding: 40px 70px;">My Shopping List</h1>
+</div>
+<h5 style = "text-align: center; margin:18px">Select Items to Move to Your Pantry</h5>
+
+  <div class="container">
+    <table class="table table-sm table-hover">
+      <tr style="background-color:lavenderblush">
+      <th style="text-align:left">Item</th>
+      <th style="text-align:left">Quantity</th>
+      <th></th>
+      <th style="text-align:left;">Update</th>
+      </tr>
+      <tbody>
+        <!--  -->
+        <tr *ngFor="let s of shoppingList"  [style]= "tstyle" [class] ="s.rowClicked ? 'table-primary' : '' "  (click) = "purchaseItem(s) ">
+          <td  (click) = "s.rowClicked = !s.rowClicked" style="text-align:left">{{ s.ingredient.name }}</td>
+            <td (click) = "s.rowClicked = !s.rowClicked" style="text-align:left"><span>{{s.amount}}</span>
+            <span style="margin-left: 12px;">{{s.ingredient.units}}</span>
+            </td>
+          <td> <button class = "btn" (click) = "subtractQuantity(s)" style="border:none;background:none;color:rgb(199, 21, 21)"><b> &#8722; </b></button>
+          </td>
+          <td><button class = "btn" (click) = "addQuantity(s)" style="border:none;background:none;color:rgb(35, 187, 35)"><b> &#43; </b></button>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr *ngFor="let c of customItems" [style]="tstyle" [class] = "c.rowClicked ? 'table-primary' : '' ">
+          <td (click) = "c.rowClicked = !c.rowClicked" style="text-align:left">{{ c.ingredient.name }}</td>
+          <td (click) = "c.rowClicked = !c.rowClicked" style="text-align:left">{{ c.amount }}</td>
+          <td> <button class = "btn"(click) = "deletecustom(c)" style="border:none;background:none;color:rgb(199, 21, 21)"><b> &#8722; </b></button>
+          </td>
+          <td><button class = "btn" (click) = "addcustom(c)" style="border:none;background:none;color:rgb(35, 187, 35)"><b> &#43; </b></button>
+            </td>
+        </tr>
+        <tr>
+          <td colspan="2">Custom Item: 
+          <input type="text" [(ngModel)]="notes" style="width: max-content;"/>
+          <button class = "btn btn-secondary" (click) = "addCustom()">Add Custom Item</button>
+        </td><td>&nbsp;</td><td></td>
+        </tr>
+
+      </tbody>
+    </table>
+   
+    <button class="btn btn-info" (click) = "selectAll()">Select All</button>
+    <button class="btn btn-info" (click) = "clearSelected()">Deselect All</button>
+    <button class="btn btn-info" (click) = "purchase()">Purchase Selected Items</button>
+    <button class="btn btn-danger" (click) = "clearList()"
+    data-toggle="popover"
+    data-placement="Top"
+    data-trigger="hover"
+    title="Are You Sure?"
+    data-content="This will remove ALL of your items">Delete all</button>
+  </div>
+</div>
+<script>
+$(function () {
+  $('[data-toggle="popover"]').popover();
+})
+</script>
