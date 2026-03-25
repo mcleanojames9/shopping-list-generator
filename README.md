@@ -1,7 +1,7 @@
 # Shopping List Generator
 
-* **BackEndMaster Branch**: Contains the back-end portion of the application that uses mainly Java.
-* **FrontEndMaster Branch**: Contains the front-end of the application that uses mainly Typescript and HTML
+* **BackEnd-SLG**: Contains the back-end portion of the application that uses mainly Java.
+* **FrontEnd-SLG**: Contains the front-end of the application that uses mainly Typescript and HTML
 
 ----------------------
 
