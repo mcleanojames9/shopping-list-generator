@@ -1,7 +1,7 @@
 # Shopping List Generator
 
-* **BackEnd-SLG**: Contains the back-end portion of the application that uses mainly Java.
-* **FrontEnd-SLG**: Contains the front-end of the application that uses mainly Typescript and HTML
+* **SLG-BackEnd**: Contains the REST API created with Spring.
+* **SLG-FrontEnd**: Contains the front-end of the application created with Angular
 
 ----------------------
 
